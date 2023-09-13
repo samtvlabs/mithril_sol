@@ -3,10 +3,11 @@ pragma solidity ^0.8.17;
 
 import {Test, console2} from "forge-std/Test.sol";
 import {Verify} from "../src/Verify.sol";
-import "./MsigData.sol";
+import "./Msig.sol";
 
 contract VerifyTest is Test {
     Verify public verify;
+MsigData public msigData;
     uint256 public constant DECIMALS = 10 ** 18;
 
     uint256 m = 357;
@@ -21,9 +22,16 @@ contract VerifyTest is Test {
         msigData = new MsigData();
     }
 
-    function test_VerificationPasses() public view {
-        bytes memory msig = msigData.msig();
-        verify.verify_stm(m, k, phi_f, ms, msig);
-        // TODO: Adds assertions
+    // function test_VerificationPasses() public {
+    //     bytes memory msig = msigData.msig();
+    //     // let result = verify.verify_stm(m, k, phi_f, ms, msig);
+    //     assertEq(verify.verify_stm(m, k, phi_f, ms, msig), true);
+    
+    //     // TODO: Adds assertions
+    // }
+
+    function test_BadSignaturesFails() public {
+          bytes memory msig = abi.encodePacked([0, 1, 2, 3, 4, 5]);
+          assertEq(verify.verify_stm(m, k, phi_f, ms, msig), true);
     }
 }

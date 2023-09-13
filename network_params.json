@@ -1,0 +1,19 @@
+{
+    "participants": [
+        {
+            "el_client_type": "reth",
+            "el_client_image": "docker.io/samueldare/reth_mihtril",
+            "cl_client_type": "lighthouse",
+            "cl_client_image": "sigp/lighthouse:latest",
+            "count": 1
+        },
+        {
+            "el_client_type": "reth",
+            "el_client_image": "docker.io/samueldare/reth_mihtril",
+            "cl_client_type": "lighthouse",
+            "cl_client_image": "sigp/lighthouse:latest",
+            "count": 1
+        }
+    ],
+    "launch_additional_services": false
+}
