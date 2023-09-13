@@ -1,0 +1,18 @@
+cargo:rerun-if-env-changed=GMP_MPFR_SYS_CACHE
+$ mkdir -p "/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/lib"
+$ mkdir -p "/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/include"
+$ cp "/home/ubuntu/.cache/gmp-mpfr-sys/1.6/x86_64-unknown-linux-gnu/1.6.1/libmpc.a" "/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/lib/libmpc.a"
+$ cp "/home/ubuntu/.cache/gmp-mpfr-sys/1.6/x86_64-unknown-linux-gnu/1.6.1/mpc.h" "/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/include/mpc.h"
+$ cp "/home/ubuntu/.cache/gmp-mpfr-sys/1.6/x86_64-unknown-linux-gnu/1.6.1/libmpfr.a" "/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/lib/libmpfr.a"
+$ cp "/home/ubuntu/.cache/gmp-mpfr-sys/1.6/x86_64-unknown-linux-gnu/1.6.1/mpfr.h" "/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/include/mpfr.h"
+$ cp "/home/ubuntu/.cache/gmp-mpfr-sys/1.6/x86_64-unknown-linux-gnu/1.6.1/libgmp.a" "/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/lib/libgmp.a"
+cargo:limb_bits=64
+$ cp "/home/ubuntu/.cache/gmp-mpfr-sys/1.6/x86_64-unknown-linux-gnu/1.6.1/gmp.h" "/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/include/gmp.h"
+cargo:limb_bits=64
+cargo:out_dir=/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out
+cargo:lib_dir=/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/lib
+cargo:include_dir=/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/include
+cargo:rustc-link-search=native=/home/ubuntu/mithril_sol/utils/target/debug/build/gmp-mpfr-sys-e4bdc562ba7508ce/out/lib
+cargo:rustc-link-lib=static=mpc
+cargo:rustc-link-lib=static=mpfr
+cargo:rustc-link-lib=static=gmp
