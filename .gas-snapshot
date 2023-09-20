@@ -1,2 +1,1 @@
-VerifyTest:test_BadSignaturesFails() (gas: 33809)
-VerifyTest:test_VerificationPasses() (gas: 10078905)
+VerifyTest:test_BadSignaturesFails() (gas: 33787)
